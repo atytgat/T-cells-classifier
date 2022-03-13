@@ -6,7 +6,7 @@ The dataset consists of single-cell expression data, a source of data commonly u
 The different cells composing a cell tissue generally present a high heterogeneity. There are a lot of different cell types, each performing a specific function,
 and therefore presenting a different gene expression profile. In early days, medical researchers had no other option than to examine each cell by hand in
 order determine their type. With the evolution of the sequencing technologies, datasets nowadays contain thousands, sometimes even millions of cells.
-Anotating cells by hand is thus no longer an option. That's where machine learning technique come in!
+Anotating cells by hand is thus no longer an option. That's where machine learning techniques come in!
 
 Indeed, the hand annotated datasets can be used to train machine learning algorithms in order to automatically classify new single-cell datasets. More
 specifically, the task at hand is to distinguish between two kind of T-lymphocytes, which play an important role in our immune response against diseases, in this
