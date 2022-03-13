@@ -19,15 +19,16 @@ isn't always easy to distinguish between these two categories, making this task 
 
 The data is composed of two parts:
 
-/ML-A5-2020_ train. csv isa labeled dataset which contains 1000 rows representing the cells, named C-1 to C-1000. The last column, named label,
+  - /ML-A5-2020_ train. csv isa labeled dataset which contains 1000 rows representing the cells, named C-1 to C-1000. The last column, named label,
 contains the class label of each cell: 1 for cells that evolved (or are evolving) to T regulatory cells, and -1 for the T helper cells.
 
-¢ ML-A5-2020_ test .csv isa test set containing the 500 remaining cells, named C-1001 to C-1500. For this set, the class labels are not given, and it is your
+  - /ML-A5-2020_ test .csv isa test set containing the 500 remaining cells, named C-1001 to C-1500. For this set, the class labels are not given, and it is your
 task to make an as accurate prediction as possible of the type of each cell in this dataset.
 
 The data matrix is composed of 23384 columns (+ 1 label column for the training set). Columns 1 to 23370 represent the different genes. The values in those
 columns are the expression levels of the genes in each cell. Columns 23371 to 23384 contain additional information about the cells in the dataset, such as the
 patient and the tissue they where taken from, their size, ete.
+
 
 
 
