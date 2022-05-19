@@ -14,16 +14,18 @@ require(bnclassify)
 
 
 
-
+# Since the classes are unbalanced, we use the balanced accuracy metrics to evaluate our models.
 BCR = function(CM) {
+  # Balanced accuracy metrics
   TP = CM[2,2]
   TN = CM[1,1]
   FP = CM[2,1]
   FN = CM[1,2]
   
   result = 1/2 * (TP/(TP+FN) + TN/(FP+TN))
-  
 }
+
+
 # twoClassSummaryCustom function from https://stats.stackexchange.com/questions/210361/r-caret-train-rfe-optimize-for-positive-predictive-value-instead-of-accuracy-o
 twoClassSummaryCustom = function (data, lev = NULL, model = NULL) 
 {
@@ -43,6 +45,8 @@ twoClassSummaryCustom = function (data, lev = NULL, model = NULL)
   out
 }
 
+
+### Load and prepare the dataset
 load("C:/Users/alext/Documents/full_df.processed.RData")
 
 # preprocess : na -> 0
@@ -59,9 +63,9 @@ full_df.processed = cbind(genes.full, full_df[,23371:23385])
 
 
 
-
-
 set.seed(998)
+
+# Model selection is performed using the k-fold method with 5 folds.
 kfolds = createFolds(full_df.processed$label, k = 5)
 
 
